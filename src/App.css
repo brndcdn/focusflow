@@ -72,7 +72,7 @@ header p {
 
 .task-card {
   background: white;
-  border: 1px solid #ddd;
+  border: 1px solid hsl(0, 0%, 80%);
   border-radius: 10px;
   padding: 16px;
 }
