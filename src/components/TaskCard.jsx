@@ -1,8 +1,22 @@
-function TaskCard({ title, priority }) {
+function TaskCard({ task, onMoveTask }) {
   return (
     <article className="task-card">
-      <h3>{title}</h3>
-      <span>{priority}</span>
+      <h3>{task.title}</h3>
+      <span>{task.priority}</span>
+
+      <div className="task-actions">
+        {task.status !== "todo" && (
+          <button onClick={() => onMoveTask(task.id, "todo")}>To Do</button>
+        )}
+
+        {task.status !== "doing" && (
+          <button onClick={() => onMoveTask(task.id, "doing")}>Doing</button>
+        )}
+
+        {task.status !== "done" && (
+          <button onClick={() => onMoveTask(task.id, "done")}>Done</button>
+        )}
+      </div>
     </article>
   );
 }

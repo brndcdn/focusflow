@@ -87,3 +87,23 @@ header p {
   font-size: 13px;
   color: #555;
 }
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.task-actions button {
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.task-actions button:hover {
+  background: #eeeeee;
+}
