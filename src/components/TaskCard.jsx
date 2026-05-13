@@ -1,8 +1,12 @@
 function TaskCard({ task, onMoveTask }) {
   return (
     <article className="task-card">
-      <h3>{task.title}</h3>
-      <span>{task.priority}</span>
+      <div className="task-card-header">
+        <h3>{task.title}</h3>
+        <span className={`priority priority-${task.priority.toLowerCase()}`}>
+          {task.priority}
+        </span>
+      </div>
 
       <div className="task-actions">
         {task.status !== "todo" && (

@@ -107,3 +107,72 @@ header p {
 .task-actions button:hover {
   background: #eeeeee;
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.controls label {
+  font-weight: 600;
+}
+
+.controls select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+.progress {
+  margin-top: 16px;
+}
+
+.progress span {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.progress-track {
+  height: 8px;
+  background: #eeeeee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #222;
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.priority {
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 4px 8px;
+  white-space: nowrap;
+}
+
+.priority-high {
+  background: #ffe0e0;
+  color: #8a1f1f;
+}
+
+.priority-medium {
+  background: #fff1cc;
+  color: #7a5200;
+}
+
+.priority-low {
+  background: #e5f4e8;
+  color: #1f6b35;
+}

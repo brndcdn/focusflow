@@ -34,6 +34,7 @@ const initialTasks = [
 
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
+  const [priorityFilter, setPriorityFilter] = useState("All");
 
   function moveTask(taskId, newStatus) {
     const updatedTasks = tasks.map((task) => {
@@ -47,14 +48,37 @@ function App() {
     setTasks(updatedTasks);
   }
 
-  const todoTasks = tasks.filter((task) => task.status === "todo");
-  const doingTasks = tasks.filter((task) => task.status === "doing");
-  const doneTasks = tasks.filter((task) => task.status === "done");
+  const filteredTasks =
+    priorityFilter === "All"
+      ? tasks
+      : tasks.filter((task) => task.priority === priorityFilter);
+
+  const todoTasks = filteredTasks.filter((task) => task.status === "todo");
+  const doingTasks = filteredTasks.filter((task) => task.status === "doing");
+  const doneTasks = filteredTasks.filter((task) => task.status === "done");
+
+  const completedTasks = tasks.filter((task) => task.status === "done").length;
+  const progressPercentage = Math.round((completedTasks / tasks.length) * 100);
 
   return (
     <main className="app">
       <Header />
-      <SprintSummary />
+      <SprintSummary progressPercentage={progressPercentage} />
+
+      <section className="controls">
+        <label htmlFor="priority-filter">Filter by priority</label>
+
+        <select
+          id="priority-filter"
+          value={priorityFilter}
+          onChange={(event) => setPriorityFilter(event.target.value)}
+        >
+          <option value="All">All</option>
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+      </section>
 
       <section className="board">
         <TaskColumn title="To Do" tasks={todoTasks} onMoveTask={moveTask} />
