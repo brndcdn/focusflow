@@ -10,15 +10,21 @@ function TaskCard({ task, onMoveTask }) {
 
       <div className="task-actions">
         {task.status !== "todo" && (
-          <button onClick={() => onMoveTask(task.id, "todo")}>To Do</button>
+          <button onClick={() => onMoveTask(task.id, "todo")}>
+            Move to To Do
+          </button>
         )}
 
         {task.status !== "doing" && (
-          <button onClick={() => onMoveTask(task.id, "doing")}>Doing</button>
+          <button onClick={() => onMoveTask(task.id, "doing")}>
+            Move to Doing
+          </button>
         )}
 
         {task.status !== "done" && (
-          <button onClick={() => onMoveTask(task.id, "done")}>Done</button>
+          <button onClick={() => onMoveTask(task.id, "done")}>
+            Move to Done
+          </button>
         )}
       </div>
     </article>

@@ -8,9 +8,13 @@ function TaskColumn({ title, tasks, onMoveTask }) {
       </h2>
 
       <div className="task-list">
-        {tasks.map((task) => (
-          <TaskCard key={task.id} task={task} onMoveTask={onMoveTask} />
-        ))}
+        {tasks.length === 0 ? (
+          <p className="empty-state">No tasks here yet.</p>
+        ) : (
+          tasks.map((task) => (
+            <TaskCard key={task.id} task={task} onMoveTask={onMoveTask} />
+          ))
+        )}
       </div>
     </section>
   );
