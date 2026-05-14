@@ -4,7 +4,7 @@ function TaskColumn({ title, tasks, onMoveTask }) {
   return (
     <section className="task-column">
       <h2>
-        {title} <span>({tasks.length})</span>
+        {title} <span>{tasks.length}</span>
       </h2>
 
       <div className="task-list">

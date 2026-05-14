@@ -22,12 +22,18 @@ const initialTasks = [
     id: 4,
     title: "Add task movement buttons",
     priority: "High",
-    status: "todo",
+    status: "doing",
   },
   {
     id: 5,
     title: "Show task counts per column",
     priority: "Medium",
+    status: "todo",
+  },
+  {
+    id: 6,
+    title: "Show task counts per column",
+    priority: "Low",
     status: "todo",
   },
 ];
