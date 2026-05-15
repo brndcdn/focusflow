@@ -1,6 +1,25 @@
 # FocusFlow
 
-A simple React sprint task board for managing weekly design engineering work.
+## Prototype Disclaimer
+
+FocusFlow is a frontend learning prototype built during a 1-week React sprint.
+
+The current version focuses on:
+
+- React fundamentals
+- state management
+- UI architecture
+- responsive frontend implementation
+
+The project does not yet include:
+
+- task creation
+- editing/deleting tasks
+- persistence/database storage
+- authentication
+- multi-user functionality
+
+Tasks are currently hardcoded for demonstration purposes.
 
 ## Features
 

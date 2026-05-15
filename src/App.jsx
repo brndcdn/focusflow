@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import SprintSummary from "./components/SprintSummary";
 import TaskColumn from "./components/TaskColumn";
 import "./App.css";
+import Disclaimer from "./components/Disclaimer";
 
 const initialTasks = [
   { id: 1, title: "Set up Vite project", priority: "High", status: "done" },
@@ -91,6 +92,7 @@ function App() {
         <TaskColumn title="Doing" tasks={doingTasks} onMoveTask={moveTask} />
         <TaskColumn title="Done" tasks={doneTasks} onMoveTask={moveTask} />
       </section>
+      <Disclaimer />
     </main>
   );
 }
