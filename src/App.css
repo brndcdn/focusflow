@@ -5,10 +5,22 @@
 }
 
 body {
-  /* Inherits system-ui / Segoe UI / Roboto stack from index.css — removes Arial */
-  font-family: inherit;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
   background: hsl(0, 0%, 97%);
   color: #222;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .app {
